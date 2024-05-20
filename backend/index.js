@@ -53,9 +53,10 @@ const transporter = nodemailer.createTransport({
   port: 465,
   host: "smtp.gmail.com",
   auth: {
-    user: 'samisiam851@gmail.com',
-    pass: 'mtsiqodfiaixvqyj',
+    user: 'blazebd.com@gmail.com',
+    pass: 'gtahlybokrxppyxr',
   },
+  // mtsiqodfiaixvqyj
   secure: true, // upgrades later with STARTTLS -- change this based on the PORT
 });
 const generateRandomPin = () => {
