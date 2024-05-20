@@ -125,7 +125,7 @@ axios.get(`/vote/check/user/${electionId}/${userData.email}`)
                             video.srcObject = null;
                             setLoading(false)
                             toastPush("Camera verified")
-                            //  navigate(`/vote/otpverify/${electionId}/${candidateId}?redirecturl=${redirecturl}`)
+                              navigate(`/vote/otpverify/${electionId}/${candidateId}?redirecturl=${redirecturl}`)
                          } 
                         const drawBox = new faceapi.draw.DrawBox(box, {
                             label:stateVerify,
