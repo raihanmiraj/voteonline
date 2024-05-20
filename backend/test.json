@@ -1,0 +1,72 @@
+[
+    {
+        "_id": "64b457203ffd371c7a35b817",
+        "electionid": "64b41f8267b810554b43df73",
+        "email": "nabil@gmail.com",
+        "name": "Nazmul Hasan",
+        "nid": "3754926487",
+        "photoURL": "https://i.ibb.co/bQ5TvqM/P3-OLGJ1-copy-1.png",
+        "role": "candidate",
+        "userid": "64b42cb94b4cf0b8ba7bef10"
+    },
+    {
+        "_id": "64b457793ffd371c7a360bdb",
+        "electionid": "64b41f8267b810554b43df73",
+        "email": "adan@gmail.com",
+        "name": "Tamzidul Adan",
+        "nid": "12345678",
+        "photoURL": "https://i.ibb.co/F48wT1z/12501846-1583842255263865-827293595-a.jpg",
+        "role": "candidate",
+        "userid": "64b42cfc4b4cf0b8ba7bef11"
+    },
+    {
+        "_id": "64b457c73ffd371c7a3655b8",
+        "electionid": "64b41f8267b810554b43df73",
+        "email": "adan@gmail.com",
+        "name": "Tamzidul Adan",
+        "nid": "12345678",
+        "photoURL": "https://i.ibb.co/F48wT1z/12501846-1583842255263865-827293595-a.jpg",
+        "role": "candidate",
+        "userid": "64b42cfc4b4cf0b8ba7bef11"
+    },
+    {
+        "_id": "64b458013ffd371c7a368a33",
+        "electionid": "64b41f8267b810554b43df73",
+        "email": "adan@gmail.com",
+        "name": "Tamzidul Adan",
+        "nid": "12345678",
+        "photoURL": "https://i.ibb.co/F48wT1z/12501846-1583842255263865-827293595-a.jpg",
+        "role": "candidate",
+        "userid": "64b42cfc4b4cf0b8ba7bef11"
+    },
+    {
+        "_id": "64b458343ffd371c7a36b6bc",
+        "electionid": "64b41f8267b810554b43df73",
+        "email": "adan@gmail.com",
+        "name": "Tamzidul Adan",
+        "nid": "12345678",
+        "photoURL": "https://i.ibb.co/F48wT1z/12501846-1583842255263865-827293595-a.jpg",
+        "role": "candidate",
+        "userid": "64b42cfc4b4cf0b8ba7bef11"
+    },
+    {
+        "_id": "64b458503ffd371c7a36d2c8",
+        "electionid": "64b41f8267b810554b43df73",
+        "email": "adan@gmail.com",
+        "name": "Tamzidul Adan",
+        "nid": "12345678",
+        "photoURL": "https://i.ibb.co/F48wT1z/12501846-1583842255263865-827293595-a.jpg",
+        "role": "candidate",
+        "userid": "64b42cfc4b4cf0b8ba7bef11"
+    },
+    {
+        "_id": "64b458963ffd371c7a374a2d",
+        "electionid": "64b41f8267b810554b43df73",
+        "email": "adan@gmail.com",
+        "name": "Tamzidul Adan",
+        "nid": "12345678",
+        "photoURL": "https://i.ibb.co/F48wT1z/12501846-1583842255263865-827293595-a.jpg",
+        "role": "candidate",
+        "userid": "64b42cfc4b4cf0b8ba7bef11"
+    }
+]
