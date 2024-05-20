@@ -58,7 +58,7 @@ const transporter = nodemailer.createTransport({
   },
   secure: true, // upgrades later with STARTTLS -- change this based on the PORT
 });
-const generateRandomPin=()=> {
+const generateRandomPin = () => {
   let pin = '';
   for (let i = 0; i < 4; i++) {
     const randomDigit = Math.floor(Math.random() * 10);
@@ -79,55 +79,55 @@ async function run() {
     let enrolledClasses = database.collection("enrolledclasses")
     let candidateDocuments = database.collection("candidates")
     const usersCollection = database.collection("users");
-    const voteCollection = database.collection("votes"); 
+    const voteCollection = database.collection("votes");
     app.post('/jwt', (req, res) => {
       const user = req.body;
-      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' })
+      const token = jwt.sign(user, "dafea91334ce03e49042a919e62de4bd212fc5d3c5c1e08656122279bb16bbadca7be7506441ff2e209f59235ab8dc4eb21ee5ae96d9816168c68e22ed9247d9", { expiresIn: '1h' })
 
       res.send({ token })
     })
 
 
 
-    
-app.post('/sendotp', async (req, res) => {
-  const { to  } = req.body;
-  const randomPin = generateRandomPin();
-  const mailData = {
-    from: 'samisiam851@gmail.com',
-    to: to,
-    subject: "Get Your OTP",
-    text:  `Your OTP is ${randomPin}`,
-    html: `<b>Hey there! </b><br> Your OTP is ${randomPin}<br/>`,
-  };
- const filter = { email:to };
-  const updateDoc = {
-    $set: {
-      otp: randomPin
-    },
-  };
 
-  const result = await usersCollection.updateOne(filter, updateDoc);
+    app.post('/sendotp', async (req, res) => {
+      const { to } = req.body;
+      const randomPin = generateRandomPin();
+      const mailData = {
+        from: 'samisiam851@gmail.com',
+        to: to,
+        subject: "Get Your OTP",
+        text: `Your OTP is ${randomPin}`,
+        html: `<b>Hey there! </b><br> Your OTP is ${randomPin}<br/>`,
+      };
+      const filter = { email: to };
+      const updateDoc = {
+        $set: {
+          otp: randomPin
+        },
+      };
+
+      const result = await usersCollection.updateOne(filter, updateDoc);
 
 
-  transporter.sendMail(mailData, (error, info) => {
-    if (error) {
-      return console.log(error);
-    }
-    res.status(200).send({ message: "Mail send", message_id: info.messageId });
-  });
-});
+      transporter.sendMail(mailData, (error, info) => {
+        if (error) {
+          return console.log(error);
+        }
+        res.status(200).send({ message: "Mail send", message_id: info.messageId });
+      });
+    });
 
-app.post('/verifyotp', async (req, res) => {
-  const { otp, email  } = req.body; 
-   const result =  await usersCollection.find({email:email, otp:otp}).toArray();
- if(result.length==0){
-  res.status(404).send({ message: "not exist"   });
- }else{
-  res.status(200).send({ message: "exist"  });
- }
+    app.post('/verifyotp', async (req, res) => {
+      const { otp, email } = req.body;
+      const result = await usersCollection.find({ email: email, otp: otp }).toArray();
+      if (result.length == 0) {
+        res.status(404).send({ message: "not exist" });
+      } else {
+        res.status(200).send({ message: "exist" });
+      }
 
-});
+    });
 
 
     // vote start
@@ -216,11 +216,11 @@ app.post('/verifyotp', async (req, res) => {
     app.delete("/delete/candidate/:candidateid/:electionid", async (req, res) => {
       let candidateid = req.params.candidateid
       let electionid = req.params.electionid
-       let query = {
+      let query = {
         // _id: new ObjectId(candidateid),
-        electionid:electionid,
-        userid:candidateid
-   }
+        electionid: electionid,
+        userid: candidateid
+      }
       let deleteData = await candidateDocuments.deleteOne(query);
       if (deleteData.deletedCount == 1) {
         res.send("Succesfully Deleted")
@@ -356,10 +356,10 @@ app.post('/verifyotp', async (req, res) => {
 
 
       let voteCheck = await voteCollection.find({ electionId: electionId, useremail: useremail }).toArray();
-      if (voteCheck.length >0) {
-       return res.status(403).send({ message: 'Already Voted' });
+      if (voteCheck.length > 0) {
+        return res.status(403).send({ message: 'Already Voted' });
       }
-       
+
 
       let filter = {
         _id: new ObjectId(candidateId)
@@ -408,11 +408,11 @@ app.post('/verifyotp', async (req, res) => {
       let result = await voteCollection.find({ electionId: electionid, useremail: email }).toArray();
       if (result.length == 0) {
         return res.send({
-          vote:false
+          vote: false
         })
       }
-        res.status(403).send({ vote: true, message: 'no vote' });
-      
+      res.status(403).send({ vote: true, message: 'no vote' });
+
 
     })
 
@@ -449,8 +449,6 @@ app.post('/verifyotp', async (req, res) => {
 
     app.post('/users', async (req, res) => {
       const user = req.body;
-
-
       const queryone = { nid: user.nid }
       const existingNid = await usersCollection.findOne(queryone);
 
@@ -471,6 +469,20 @@ app.post('/verifyotp', async (req, res) => {
       const result = await usersCollection.insertOne(user);
       res.send(result);
     });
+
+
+    app.get("/user/:email", async (req, res) => {
+      let email = req.params.email
+      const query = { email: email }
+      const existingUser = await usersCollection.findOne(query);
+
+      if (existingUser) {
+        return res.send({ message: 'user already exists', data: existingUser })
+      }
+    })
+
+
+
     // app.get('/users', verifyJWT, verifyAdmin, async (req, res) => {
     //   const result = await usersCollection.find().toArray();
     //   res.send(result);

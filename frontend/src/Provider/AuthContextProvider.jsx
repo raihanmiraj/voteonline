@@ -101,12 +101,13 @@ const AuthContextProvider = ({ children }) => {
       if (loggedInUser) {
         setIsLogged(true);
 
-        axios.post("/users", {
-          name: loggedInUser.displayName,
-          photoURL: loggedInUser.photoURL,
-          email: loggedInUser.email,
-          role: 'voter'
-        })
+        // axios.post("/users", {
+        //   name: loggedInUser.displayName,
+        //   photoURL: loggedInUser.photoURL,
+        //   email: loggedInUser.email,
+        //   role: 'voter'
+        // })
+        axios.get("/user/"+loggedInUser.email)
           .then(response => {
 
             console.log(response.data.data.role)
