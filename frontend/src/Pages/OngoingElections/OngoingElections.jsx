@@ -34,7 +34,7 @@ const OngoingElections = ({ setTitle }) => {
     const [currentID, setCurrentID] = useState(null)
     const [feedbackDetails, setfeedbackDetails] = useState(null)
 
- 
+
 
     const selectClassHandler = (e) => {
         if (user) {
@@ -62,50 +62,20 @@ const OngoingElections = ({ setTitle }) => {
 
     const [elections, setElections] = useState([]);
     useEffect(() => {
-     setTitle('Ongoing Elections')
+        setTitle('Ongoing Elections')
         if (loading) {
-                    axios.get(`/elections`)
+            axios.get(`/elections`)
                 .then(response => {
                     let data = response.data
                     console.log(data)
                     setElections(data)
                     setLoading(false)
                 })
-            }
+        }
     }, []);
-   
-if(!user){
-    return   <>
 
-    <div class="bg-transparent">
-        <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 min-">
-            <h2 class="text-6xl font-sans font-semibold text-gray-600 my-font text-center">Ongoing Elections</h2>
-            <div class="mt-8 ">
-                {loading ? <>
-                    <Spinner />
-                </> : <>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
-                                {elections && elections.map(election => <OngoingElectionsCard election={election}></OngoingElectionsCard>)}
-                            </div>
-                </>}
-
-
-
-              
-
-            </div>
-        </div>
-     
-    </div>
-
-
-
-</>
-}
-else{
-    return (
-
-        <>
+    if (!user) {
+        return <>
 
             <div class="bg-transparent">
                 <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 min-">
@@ -114,24 +84,55 @@ else{
                         {loading ? <>
                             <Spinner />
                         </> : <>
-                        <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
-                                        {elections && elections.map(election => <OngoingElectionsCard election={election}></OngoingElectionsCard>)}
-                                    </div>
+                            <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+                                {elections && elections.map(election => <OngoingElectionsCard election={election}></OngoingElectionsCard>)}
+                            </div>
                         </>}
 
 
 
-                      
+
 
                     </div>
                 </div>
-             
+
             </div>
 
 
 
         </>
-            );}
+    }
+    else {
+        return (
+
+            <>
+
+                <div class="bg-transparent">
+                    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 min-">
+                        <h2 class="text-6xl font-sans font-semibold text-gray-600 my-font text-center">Ongoing Elections</h2>
+                        <div class="mt-8 ">
+                            {loading ? <>
+                                <Spinner />
+                            </> : <>
+                                <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+                                    {elections && elections.map(election => <OngoingElectionsCard election={election}></OngoingElectionsCard>)}
+                                </div>
+                            </>}
+
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </>
+        );
+    }
 };
 
 export default OngoingElections;

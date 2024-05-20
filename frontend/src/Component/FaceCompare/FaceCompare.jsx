@@ -26,10 +26,7 @@ axios.get(`/vote/check/user/${electionId}/${userData.email}`)
 .then(response=>{
     setVoteAvailable(true)
     
-            
-            
-        
-            console.log(profileImage)
+             console.log(profileImage)
          
             Promise.all([
                 faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
@@ -117,7 +114,7 @@ axios.get(`/vote/check/user/${electionId}/${userData.email}`)
                         const box = resizedDetections[i].detection.box;
                         console.log(results)
                         let stateVerify = 'Till Now Not verified'
-                        if (result._distance < .5) {
+                        if (result._distance < .55) {
                             stateVerify = 'Verified'
                             setVerifyImage(true)
                             clearInterval(intervalSet)
@@ -128,7 +125,7 @@ axios.get(`/vote/check/user/${electionId}/${userData.email}`)
                             video.srcObject = null;
                             setLoading(false)
                             toastPush("Camera verified")
-                             navigate(`/vote/otpverify/${electionId}/${candidateId}?redirecturl=${redirecturl}`)
+                            //  navigate(`/vote/otpverify/${electionId}/${candidateId}?redirecturl=${redirecturl}`)
                          } 
                         const drawBox = new faceapi.draw.DrawBox(box, {
                             label:stateVerify,

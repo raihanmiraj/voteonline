@@ -70,7 +70,7 @@ const Header = () => {
           <div className="flex justify-between items-center   border-gray-100 py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <h1 className='h-8 my-font w-auto sm:h-10 font-sans text-orange-500 text-5xl hover:scale-110 transition-all ease-in-out duration-700 font-semibold flex gap-2 justify-center items-center  '> <span className='text-gray-600'>Vote</span> Pulse </h1>
+                <h1 className='h-8 my-font w-auto sm:h-10 font-sans text-orange-500 text-5xl hover:scale-110 transition-all ease-in-out duration-700 font-semibold flex justify-center items-center '><span className='text-gray-600'>E-</span>Voting </h1>
 
               </a>
             </div>

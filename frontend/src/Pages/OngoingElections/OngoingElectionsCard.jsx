@@ -27,7 +27,10 @@ const ClassCard = ({election}) => {
         </div>
       </div>       */}
             <div className="max-w-[full] rounded border shadow-lg my-20 pb-6">
-                <img className="w-full h-[50%] rounded" src={image} alt={title} />
+              <div className='aspect-[16/9] overflow-hidden'>
+              <img className="w-full  rounded" src={image} alt={title} />
+
+              </div>
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{title}</div>
                     <p className="text-gray-700 text-base">

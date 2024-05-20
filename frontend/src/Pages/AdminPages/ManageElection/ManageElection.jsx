@@ -224,7 +224,7 @@ const ManageElection = ({ setTitle }) => {
                                                         </td>
 
                                                         <td>
-                                                            <Link to={`/admin/managecandidate/${e._id}`} className="btn  btn-xs bg-purple-600 text-white hover:bg-purple-500 ">View</Link>
+                                                            <Link to={`/admin/managecandidate/${e._id}`} className="btn  btn-xs bg-orange-600 text-white hover:bg-orange-500 ">View</Link>
                                                         </td>
 
                                                     </tr>

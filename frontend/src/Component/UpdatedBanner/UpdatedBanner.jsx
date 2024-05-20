@@ -24,7 +24,7 @@ const UpdatedBanner = () => {
                 </div>
             </div>
             <div className='basis-[50%] relative'>
-                <img src="/home-cover.jpg" className=' w-[70%] md:w-full  mx-auto'  alt="" />
+                <img src="/bannermini.png" className=' w-[70%] md:w-full  mx-auto'  alt="" />
                 <MovingComponent className="custom-class" />
             </div>
         </div>
