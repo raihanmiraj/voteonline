@@ -70,7 +70,7 @@ const Contact = () => {
     // const email = event.target.email.value;
     console.log(message, email, name);
     const templateParams = {
-      to_email: 'samisiam851@gmail.com', 
+      to_email: 'rsnmiraj@gmail.com', 
       from_name: name,
       from_email: email,
       message: message
@@ -126,7 +126,7 @@ const Contact = () => {
             <GrMail className='md:text-7xl text-5xl' />
             <div>
               <h2 className='md:text-3xl text-2xl font-semibold text-gray-800 hover:text-orange-500 cursor-default transition-all duration-300 '>Email</h2>
-              <h3 className='md:text-xl text-xl text-gray-500 font-light'>Samisiam851@gmail.com</h3>
+              <h3 className='md:text-xl text-xl text-gray-500 font-light'>rsnmiraj@gmail.com</h3>
             </div>
           </div>
 

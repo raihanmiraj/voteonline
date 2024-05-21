@@ -39,8 +39,7 @@ const verifyJWT = (req, res, next) => {
     next();
   })
 }
-let uri = "mongodb+srv://raihanmiraj:Bangladesh123@cluster0.dhnvk0f.mongodb.net/?retryWrites=true&w=majority";
-// let uri = 'mongodb+srv://samisiam851:IzxHVRpaCCZiyoO9@cluster0.lkouiuy.mongodb.net/?retryWrites=true&w=majority';
+let uri = "mongodb+srv://raihanmiraj:Bangladesh123@cluster0.dhnvk0f.mongodb.net/?retryWrites=true&w=majority"; 
 let users = [];
 let client = new MongoClient(uri, {
   serverApi: {
@@ -95,7 +94,7 @@ async function run() {
       const { to } = req.body;
       const randomPin = generateRandomPin();
       const mailData = {
-        from: 'samisiam851@gmail.com',
+        from: 'blazebd.com@gmail.com',
         to: to,
         subject: "Get Your OTP",
         text: `Your OTP is ${randomPin}`,

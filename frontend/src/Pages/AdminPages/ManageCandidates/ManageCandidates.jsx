@@ -16,7 +16,7 @@ const ManageCandidates = ({ setTitle }) => {
     const [progresssending, setProgresssending] = useState(false);
     const [uploadedImageUrl, setUploadedImageUrl] = useState(null);
     const [options, setoptions] = useState([{ name: 'Option 1️⃣', id: 1 }, { name: 'Option 2️⃣', id: 2 }]);
-    const [candidates, setCandidates] = useState([{ "_id": "64b41ddb67b810554b43df71", "name": "Siam", "email": "admin@gmail.com", "photoURL": "https://i.ibb.co/Qp7CpRP/DP.jpg", "role": "admin", "nid": "1234567" }]);
+    const [candidates, setCandidates] = useState([{ "_id": "64b41ddb67b810554b43df71", "name": "admin", "email": "admin@gmail.com", "photoURL": "https://i.ibb.co/Qp7CpRP/DP.jpg", "role": "admin", "nid": "1234567" }]);
     const [candidatesLoading, setCandidatesLoading] = useState(true)
     const [selectCandidated, setSelectCandidates] = useState([]);
     const [selectCandidatesLoading, setSelectCandidatesLoading] = useState(true)
