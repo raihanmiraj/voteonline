@@ -1,6 +1,6 @@
-## Vote Pulse
+## Vote online
 
-Vote Pulse is a real-time web application for tracking election results with a two factor authentication.
+Vote online is a real-time web application for tracking election results with a two factor authentication.
 With different Role Based Access Control(RBAC).
 
 
@@ -15,8 +15,8 @@ With different Role Based Access Control(RBAC).
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/yourusername/vote-pulse.git`
-2. Navigate to the project directory: `cd vote-pulse`
+1. Clone the repository: `git clone https://github.com/yourusername/vote-online.git`
+2. Navigate to the project directory: `cd vote-online`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 
@@ -37,4 +37,4 @@ You can be a type of user from three types in this project.
 
 Email: [samisiam851@gmail.com](samisiam851@gmail.com)
 
-Live Site - https://vote-pulse.web.app/
+Live Site - https://vote-online.web.app/

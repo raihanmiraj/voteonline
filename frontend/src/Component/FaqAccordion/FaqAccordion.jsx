@@ -15,20 +15,20 @@ const FaqAccordion = () => {
 
     const faqData = [
         {
-            question: "What is VotePulse",
-            answer: "VotePulse is an online voting platform designed to streamline the election and voting process. It offers a secure and efficient way for organizations to conduct elections, polls, and surveys."
+            question: "What is Voteonline",
+            answer: "Voteonline is an online voting platform designed to streamline the election and voting process. It offers a secure and efficient way for organizations to conduct elections, polls, and surveys."
         },
         {
-            question: "How can I start a free election on VotePulse?",
-            answer: "Starting a free election on VotePulse is easy. Simply sign in as an admin, use our user-friendly interface to create your election, and customize it according to your needs. You can then invite voters and start the voting process."
+            question: "How can I start a free election on Voteonline?",
+            answer: "Starting a free election on Voteonline is easy. Simply sign in as an admin, use our user-friendly interface to create your election, and customize it according to your needs. You can then invite voters and start the voting process."
         },
         {
             question: "Can I get assistance in managing my election?",
             answer: "Yes, you can! Our voting experts are available to provide instructions and suggestions throughout the election process. They can guide you in setting up and managing your election effectively."
         },
         {
-            question: "What are the key features of VotePulse?",
-            answer: "VotePulse offers a range of features, including real-time results, high-integrity voting, flexible ballots, automated setup, and security with 256-bit encryption. You can also notify voters through various channels and tabulate results instantly."
+            question: "What are the key features of Voteonline?",
+            answer: "Voteonline offers a range of features, including real-time results, high-integrity voting, flexible ballots, automated setup, and security with 256-bit encryption. You can also notify voters through various channels and tabulate results instantly."
         },
         {
             question: "How can I manage users as an admin?",

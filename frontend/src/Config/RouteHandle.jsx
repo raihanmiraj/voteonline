@@ -51,7 +51,7 @@ import FaceCompare from '../Component/FaceCompare/FaceCompare';
 const RouteHandle = () => {
   const { registerUser, user, logOut, loginUser, isLogged, setIsLogged, loading } = useContext(AuthContext);
   const setTitle = (title) => {
-    document.title = `VotePulse | ${title}`
+    document.title = `Voteonline | ${title}`
   }
   const router = createBrowserRouter([
     {

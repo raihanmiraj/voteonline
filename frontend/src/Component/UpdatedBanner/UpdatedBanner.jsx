@@ -16,7 +16,7 @@ const UpdatedBanner = () => {
                 <div className='my-font md:text-7xl text-4xl mx-5 md:mx-1 text-gray-700 text-center md:text-start font-bold my-5'>
                     Easy Online Election Excellence
                 </div>
-                <p className='text-gray-400 md:text-xl text-lg text-center md:text-start px-5 md:px-1  md:pe-32'>Votepulse guarantees election integrity and saves serious hours. It allows you or your voters to vote online with full security</p>
+                <p className='text-gray-400 md:text-xl text-lg text-center md:text-start px-5 md:px-1  md:pe-32'>Voteonline guarantees election integrity and saves serious hours. It allows you or your voters to vote online with full security</p>
                 <div className='flex-col justify-center items-center  gap-6 py-5'>
                     <button className='bg-[#FF9021] w-[100%] md:w-fit  text-white px-6 py-5 md:text-xl font-semibold rounded-md md:hover:scale-105 transition duration-300 ease-in-out md:mx-2 my-1'>Start A Free Election</button>
 

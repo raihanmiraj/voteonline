@@ -63,7 +63,7 @@ const ScreenShots = () => {
                 <div className='basis-[50%]'>
                     <animated.div style={springProps2} className={'animated-element'} >
                         <h1 className='md:text-6xl text-3xl text-center md:text-start  font-bold text-gray-600 py-5 my-font'> Create an online election in a matter of seconds</h1>
-                        <p className='md:text-xl text-gray-400 pb-5 text-center md:text-start md:ps-3'>Whether it's a quick poll with friends or the solution to an eternal discussion in your forum, VotePulse helps you find the answer quickly and easily. <br />
+                        <p className='md:text-xl text-gray-400 pb-5 text-center md:text-start md:ps-3'>Whether it's a quick poll with friends or the solution to an eternal discussion in your forum, Voteonline helps you find the answer quickly and easily. <br />
 
                             Are you on social media and have you ever wanted to know what your followers really think? Here you can create a free poll in seconds, without any signup or registration. Of course, for complex features and to manage your polls, we also offer a login process if you want.</p>
                         <Link to='#' className='text-orange-400 font-semibold text-xl text-center md:text-start md:ps-3'>Learn more about how to create your first poll →</Link>
@@ -79,9 +79,9 @@ const ScreenShots = () => {
                 <div className='basis-[50%]'>
                     <animated.div style={springProps4}>
                         <h1 className='md:text-6xl text-3xl text-center md:text-start  font-bold text-gray-600 py-5 my-font'>Managing elections just got easier..!</h1>
-                        <p className='md:text-xl ps-3 text-center md:text-start text-gray-400 pb-5'>Whether you're overseeing a local election or tackling the responsibilities of a large-scale political campaign, VotePulse is here to streamline the entire election management process.
+                        <p className='md:text-xl ps-3 text-center md:text-start text-gray-400 pb-5'>Whether you're overseeing a local election or tackling the responsibilities of a large-scale political campaign, Voteonline is here to streamline the entire election management process.
 
-                            Are you responsible for organizing an upcoming election and looking for a reliable and efficient solution? Look no further! VotePulse empowers you to manage elections with ease and precision.</p>
+                            Are you responsible for organizing an upcoming election and looking for a reliable and efficient solution? Look no further! Voteonline empowers you to manage elections with ease and precision.</p>
                         <Link to='#' className='text-orange-400 text-center md:text-start font-semibold text-xl md:ps-3'>Learn more about how to create your first poll →</Link>
                     </animated.div>
 
