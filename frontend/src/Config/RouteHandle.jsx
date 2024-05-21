@@ -44,6 +44,7 @@ import Vote from '../Pages/Vote/Vote';
 import OurTeam from '../Pages/OurTeam/OurTeam';
 import OTPPage from '../Pages/OTPPage/OTPPage';
 import FaceCompare from '../Component/FaceCompare/FaceCompare';
+import Results from '../Pages/Results/Results';
 
 
 
@@ -75,6 +76,10 @@ const RouteHandle = () => {
         {
           path: "/ongoing",
           element:  <OngoingElections setTitle={setTitle} />,
+        },
+        {
+          path: "/results",
+          element:  <Results setTitle={setTitle} />,
         },
         {
           path: "/vote/:electionid",

@@ -137,7 +137,12 @@ const Header = () => {
                 Our Team
               </ActiveLink>
 
-
+              <ActiveLink
+                    to="/results"
+                    className="text-base font-medium text-gray-500 hover:text-orange-500 hover:scale-110 transition-all ease-in-out duration-700"
+                  >
+                  Result
+                  </ActiveLink>
 
 
 
@@ -227,7 +232,12 @@ const Header = () => {
                     Our Team
                   </ActiveLink>
 
-
+                  <ActiveLink
+                    to="/result"
+                    className="text-base font-medium text-gray-500 hover:text-orange-500 hover:scale-110 transition-all ease-in-out duration-700"
+                  >
+                  Result
+                  </ActiveLink>
 
 
                   {/* {user ? <ActiveLink

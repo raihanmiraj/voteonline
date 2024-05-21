@@ -203,6 +203,10 @@ async function run() {
       let result = await usersCollection.find({}).toArray();
       res.send(result)
     })
+    app.get("/candidates", async (req, res) => {
+      let result = await candidateDocuments.find({}).toArray();
+      res.send(result)
+    })
     // {
     //   "_id": "64b42cb94b4cf0b8ba7bef10",
     //   "name": "Nazmul Hasan",
